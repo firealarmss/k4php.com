@@ -11,6 +11,9 @@
             font-family: 'Arial', sans-serif;
             background: #f4f7f6;
             color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         header {
@@ -21,50 +24,43 @@
         }
 
         header h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: bold;
             margin: 0;
             text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
         }
 
         .hero-section {
-            height: 80vh;
+            flex-grow: 1;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             background-color: #2b2b2b;
             color: white;
+            padding: 20px;
+            text-align: center;
+            min-height: 400px;
         }
 
         .fake-terminal {
             background-color: black;
             padding: 20px;
-            width: 600px;
+            width: 100%;
+            max-width: 600px;
             border-radius: 8px;
             color: #00ff00;
             font-family: 'Courier New', Courier, monospace;
             box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
             overflow: hidden;
+            margin-top: 20px;
+            text-align: left;
         }
 
         .terminal-output {
             white-space: pre;
             font-size: 1.2rem;
             margin: 0;
-        }
-
-        .content-section {
-            padding: 60px 0;
-            background: white;
-        }
-
-        .card {
-            transition: transform 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
         }
 
         footer {
@@ -77,6 +73,39 @@
         footer p {
             margin: 0;
             font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .fake-terminal {
+                font-size: 1rem;
+                padding: 15px;
+            }
+
+            .terminal-output {
+                font-size: 1rem;
+            }
+
+            footer {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            .fake-terminal {
+                font-size: 0.9rem;
+            }
+
+            .terminal-output {
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
