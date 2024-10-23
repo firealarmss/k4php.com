@@ -129,7 +129,7 @@
          const terminal = document.getElementById("terminal");
         const lines = [
             "<?php",
-            "    echo \"Hello World!\";"
+            "    echo shell_exec("sudo echo Hello World!");"
         ];
 
         let currentLine = 0;
